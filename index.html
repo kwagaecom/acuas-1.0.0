@@ -282,6 +282,9 @@ socialShareButtons.forEach(function (button) {
   <li class="nav-item">
     <a class="nav-link" href="#about"><button type="button" class="btn btn-sm btn-primary">About</button></a>
   </li>
+ <li class="nav-item">
+    <a class="nav-link" href="#why"><button type="button" class="btn btn-sm btn-secondary">Why</button></a>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="#services"><button type="button" class="btn btn-sm btn-secondary">Services</button></a>
   </li>
@@ -645,7 +648,7 @@ body {
             </div>
         </div>
         <!-- feature Start -->
-        <div class="container-fluid feature bg-light py-5">
+        <div class="container-fluid feature bg-light py-5" id="why">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-uppercase text-primary">Why Choose</h4>
@@ -1362,8 +1365,8 @@ body {
         <div class="container-fluid testimonial pb-5"id="review">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Testimonials</h4>
-                    <h1 class="display-3 text-capitalize mb-3">Our clients reviews.</h1>
+                    
+                    <h5 class="display-3 text-capitalize mb-3">Our clients reviews.</h5>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
                     <div class="testimonial-item text-center p-4">
@@ -1448,7 +1451,7 @@ body {
                 <div class="row g-5">
                     <div class="col-lg-6 h-100 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                            <h4 class="text-uppercase text-primary">Let’s Connect</h4>
+                            <h4 class="text-uppercase text-primary"><span class="badge rounded-pill bg-success">Let’s Connect</span></h4>
             
                         </div>
                         <form>
@@ -1728,7 +1731,7 @@ body {
                 </div>
             </div>
         </div>
-  <div class="copyright_section">
+ 
          <div class="container">
                   <body onload="google_translate()">
     <div id="translation"></div>
@@ -1898,14 +1901,14 @@ iframe.goog-te-menu-frame {
     </div>
           </div>
         </div>
-      </div>
+    
         <!-- Google Map Embed -->
         <div class="row g-5 mt-5">
             <div class="col-12">
-                <h4 class="text-white mb-4">Our Location</h4>
+                <h4 class="text-white mb-4"><span class="badge rounded-pill bg-primary">Our Location</span></h4>
                 <div class="mapouter">
                     <div class="gmap_canvas">
-                        <iframe width="100%" height="400" id="gmap_canvas" 
+                        <iframe width="100%" height="500" id="gmap_canvas" 
                                 src="https://maps.google.com/maps?q=Water%20Services&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
@@ -1922,8 +1925,10 @@ iframe.goog-te-menu-frame {
         <!-- Copyright Start -->
    <footer align="center"class="footer">
         <div class="footer-buttons">
-            <a href="#header"><button type="button" class="btn btn-info btn-sm">Home</button></a>
+            <a href="#home"><button type="button" class="btn btn-info btn-sm">Home</button></a>
              <a href="#about"><button type="button" class="btn btn-secondary btn-sm">About</button></a>
+  <a href="#why"><button type="button" class="btn btn-secondary btn-sm">Why</button></a>
+  
                <a href="#services"><button type="button" class="btn btn-warning btn-sm">Services</button></a>
              <a href="#gallery"><button type="button" class="btn btn-danger btn-sm">Gallery</button></a>
           <a href="#product"><button type="button" class="btn btn-info btn-sm">Product</button></a>
