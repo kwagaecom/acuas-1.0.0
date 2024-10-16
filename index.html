@@ -1508,6 +1508,50 @@ body {
                 </div>
             </div>
         </div>
+<div style="max-width: 600px; margin: 20px auto; border: 2px solid #0066cc; border-radius: 8px; overflow: hidden;">
+  <div style="border-bottom: 1px solid #0066cc;">
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #cceeff; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #0066cc; cursor: pointer;">💧 Water Service Overview</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: block;">
+      <div style="font-size: 16px; color: #0066cc;">
+        Our water service offers comprehensive solutions for clean water supply and waste management, ensuring high standards for residential, commercial, and industrial projects.
+      </div>
+    </div>
+  </div>
+  <div style="border-bottom: 1px solid #0066cc;">
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #cceeff; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #0066cc; cursor: pointer;">🚰 Plumbing and Pipe Repairs</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: none;">
+      <div style="font-size: 16px; color: #0066cc;">
+        We provide expert plumbing services, including leak detection, pipe replacement, and repair, ensuring efficient water flow in your home or business.
+      </div>
+    </div>
+  </div>
+  <div>
+    <button data-ui-tablist-tab style="width: 100%; padding: 15px; background-color: #cceeff; border: none; text-align: left; font-size: 18px; font-weight: bold; color: #0066cc; cursor: pointer;">🚿 Water Treatment Solutions</button>
+    <div data-ui-tablist-tabpanel style="padding: 15px; display: none;">
+      <div style="font-size: 16px; color: #0066cc;">
+        Our water treatment solutions ensure safe, clean, and potable water through advanced filtration and purification systems tailored to your needs.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const accordionButtons = document.querySelectorAll('[data-ui-tablist-tab]');
+  
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const panel = button.nextElementSibling;
+      const isOpen = panel.style.display === 'block';
+
+      document.querySelectorAll('[data-ui-tablist-tabpanel]').forEach(p => p.style.display = 'none');
+      
+      if (!isOpen) {
+        panel.style.display = 'block';
+      }
+    });
+  });
+</script>
+
  <title>Image Gallery with Zoom & Carousel</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
