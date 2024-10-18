@@ -211,12 +211,12 @@ socialShareButtons.forEach(function (button) {
 
   </script>
         <!-- Navbar & Hero Start -->
-      <div class="container-fluid position-relative p-0">
+    <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <a href="#" class="navbar-brand p-0">
             <h1 class="text-primary"><i class="fas fa-hand-holding-water me-3"></i>Acuas</h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -258,6 +258,26 @@ socialShareButtons.forEach(function (button) {
 <!-- External JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+<!-- Initialize Collapse with JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbarCollapse = document.getElementById('navbarCollapse');
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false  // Prevent automatic toggle
+        });
+
+        // Manually toggle on button click
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            if (navbarCollapse.classList.contains('show')) {
+                bsCollapse.hide();
+            } else {
+                bsCollapse.show();
+            }
+        });
+    });
+</script>
+
 
   <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
         <div class="modal-dialog">
