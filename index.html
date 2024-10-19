@@ -220,70 +220,79 @@ socialShareButtons.forEach(function (button) {
   
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* Sidebar styling */
-        #sidebar {
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background: #343a40;
-            transition: all 0.3s;
-            z-index: 100;
-            color: white;
-        }
-        #sidebar.active {
-            left: 0;
-        }
-        #sidebar ul li {
-            padding: 10px;
-            list-style: none;
-        }
-        #sidebar ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        #sidebar ul li a:hover {
-            background: #495057;
-        }
-        #content {
-            transition: all 0.3s;
-        }
-        #content.active {
-            margin-left: 250px;
-        }
-        /* Close button styling */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 25px;
-            cursor: pointer;
-        }
-    </style>
- <i class="fa fa-envelope"></i> <button type="button" class="btn btn-dark btn-sm"><a href="mailto:service@water.com">service@water.com</a></button>
+<style>
+    /* Sidebar styling */
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #343a40;
+        transition: all 0.3s;
+        z-index: 100;
+        color: white;
+    }
+    #sidebar.active {
+        left: 0;
+    }
+    #sidebar ul li {
+        padding: 10px;
+        list-style: none;
+    }
+    #sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #sidebar ul li a:hover {
+        background: #495057;
+    }
+    #content {
+        transition: all 0.3s;
+    }
+    #content.active {
+        margin-left: 250px;
+    }
+    /* Close button styling */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+</style>
+
 <div class="container-fluid">
-    <div class="d-flex justify-content-between align-items-center">
-        <a href="#" class="navbar-brand p-0">
-            <h1 class="text-primary">
-                <i class="fas fa-hand-holding-water me-2"></i>Acuas
-                <button type="button" class="btn btn-dark btn-sm">
-                    <i class="fa fa-phone"></i> +91 34578 67895
-                </button>
-            </h1>
-        </a>
-        <div>
-           
-           
+    <!-- First Row: Email and Phone in one line -->
+    <div class="d-flex justify-content-end align-items-center py-2">
+        <div class="contact-info d-flex align-items-center">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:service@water.com" class="btn btn-dark btn-sm ms-2">service@water.com</a>
+            <i class="fa fa-phone ms-3"></i>
+            <button type="button" class="btn btn-dark btn-sm ms-2">+91 34578 67895</button>
         </div>
     </div>
 
-    <!-- Toggle Button for Sidebar -->
-    <button type="button" id="sidebarCollapse" class="btn btn-primary mt-3">
-        <i class="fa fa-bars"></i> 
-    </button>
+    <!-- Second Row: Logo, Sidebar Toggle, Order Now Button in one line -->
+    <div class="d-flex justify-content-between align-items-center py-2">
+        <!-- Logo -->
+        <a href="#" class="navbar-brand p-0">
+            <h1 class="text-primary m-0">
+                <i class="fas fa-hand-holding-water me-2"></i>Acuas
+            </h1>
+        </a>
+
+        <!-- Sidebar Toggle Button -->
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i> 
+        </button>
+
+        <!-- Order Now Button -->
+      <a href="#" class="btn btn-primary rounded-pill d-inline-flex py-2 px-4" data-bs-toggle="modal" data-bs-target="#orderModal"><span class="badge rounded-pill bg-warning text-dark">Order Now</span></a>
+    </div>
 
     <!-- Sidebar -->
     <nav id="sidebar">
@@ -303,9 +312,6 @@ socialShareButtons.forEach(function (button) {
             <li><a href="#video">Video</a></li>
         </ul>
     </nav>
-
-    <!-- Main content -->
- 
 </div>
 
 <!-- Bootstrap JS, Popper.js -->
@@ -338,6 +344,7 @@ socialShareButtons.forEach(function (button) {
         });
     });
 </script>
+
 
 
 
